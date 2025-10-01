@@ -11,7 +11,7 @@ This project presents a modified version of the DINOv2 Vision Transformer (ViT-L
 The core innovation is the addition of a new transformer block to the DINOv2 backbone (increasing depth from 24 to 25 layers) and fine-tuning on 4 years of GLOF-specific satellite data. This enhancement improves the model's ability to capture complex spatial features in high-resolution imagery, leading to better segmentation performance in challenging remote sensing scenarios.
 
 
-![Alt text](images\peruglof_oli_20250507.png)
+![Alt text](images/peruglof_oli_20250507.png)
 
 *Satellite imagery example of glacial lakes in a mountainous region, highlighting potential GLOF-prone areas (source: NASA Earth Observatory).*
 
@@ -36,7 +36,7 @@ DINOv2 is a state-of-the-art self-supervised Vision Transformer model from Meta 
 DINOv2 excels in feature extraction for downstream tasks like segmentation, thanks to its distillation-based self-supervision, which learns robust representations without labels.
 
 
-![Alt text](images\The-structural-diagram-of-the-DINOv2-model.png)
+![Alt text](images/The-structural-diagram-of-the-DINOv2-model.png)
 *DINOv2 model architecture diagram, showcasing the transformer blocks and self-supervised learning pipeline (source: ResearchGate).*
 
 The standard ViT architecture processes images by:
@@ -58,18 +58,18 @@ We modify the DINOv2 ViT-L/14 by appending a 25th transformer block to the encod
 
 In terms of deep learning, adding layers to neural networks (like in residual networks or transformers) allows for more abstract representations, reducing underfitting in high-dimensional data like remote sensing images.
 
-![Alt text](images\Vision-Transformer-Architecture_.png)
+![Alt text](images/Vision-Transformer-Architecture_.png)
 
 *Vision Transformer architecture, illustrating the stacked transformer blocks where the new layer is added (source: GeeksforGeeks).*
 
-![Alt text](images\Layers-in-ANN.png)
+![Alt text](images/Layers-in-ANN.png)
 
 *A general diagram of layers in an Artificial Neural Network, analogous to adding a new transformer block in ViT (source: GeeksforGeeks).*
 ## Modified Architecture
 Modified Architecture (dinov2_modified.png):
 Copy the original diagram, add a 25th block (highlight in red), and label as “New Transformer Block.”
 
-![Alt text](images\custom_dinov2_vitl14_25blocks.png)
+![Alt text](images/custom_dinov2_vitl14_25blocks.png)
 Transformer Block (transformer_block.png):
 Create a flowchart in Draw.io: Input → LayerNorm → Self-Attention → LayerScale → Residual → LayerNorm → MLP → LayerScale → Residual → Output.
 Highlight LayerScale (gamma) as a DINOv2 feature.
