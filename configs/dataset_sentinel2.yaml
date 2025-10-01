@@ -1,0 +1,8 @@
+bands: ["B02", "B03", "B04", "B08"]   # Sentinel-2 RGB + NIR
+resolution: 10
+tile_size: 256
+normalize: true
+augmentation:
+  random_flip: true
+  random_rotate: true
+  random_crop: true

@@ -1,0 +1,19 @@
+model:
+  type: vit
+  patch_size: 16
+  hidden_dim: 768
+  num_layers: 12
+  num_heads: 12
+  mlp_dim: 3072
+
+train:
+  batch_size: 16
+  epochs: 20
+  learning_rate: 3e-4
+  optimizer: adamw
+
+data:
+  dataset: sentinel2
+  train_dir: data/processed/train
+  val_dir: data/processed/val
+  test_dir: data/processed/test
