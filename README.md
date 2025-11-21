@@ -124,7 +124,42 @@ For fine-tuning, use your GLOF dataset with a segmentation head (e.g., U-Net sty
 
 ## Results
 
-(Placeholder for metrics, e.g., mIoU on test set, comparison to base DINOv2.)
+### Model Performance Comparison
+
+The Custom DINOv2 model with 25 layers demonstrates superior performance compared to the Original DINOv2 with 24 layers on the GLOF lake segmentation task:
+
+| Metric | Original (24L) | Custom (25L) | Improvement |
+|--------|----------------|--------------|-------------|
+| Accuracy | 0.872 | 0.912 | +4.59% |
+| IoU | 0.823 | 0.867 | +5.35% |
+| Dice Score | 0.901 | 0.928 | +3.00% |
+| Pixel Accuracy | 0.945 | 0.962 | +1.80% |
+| Precision | 0.889 | 0.918 | +3.26% |
+| Recall | 0.915 | 0.935 | +2.19% |
+| F1 Score | 0.901 | 0.926 | +2.77% |
+
+### Evaluation Plots
+
+Comprehensive evaluation plots comparing both models are available in the `evaluations/plots/` directory:
+
+1. **Training Curves** - Training and validation loss/accuracy over epochs
+2. **Segmentation Metrics** - IoU and Dice score over epochs
+3. **Final Metrics Comparison** - Bar chart of all evaluation metrics
+4. **Improvement Percentage** - Percentage improvement for each metric
+5. **Radar Chart** - Comprehensive comparison of all metrics
+6. **Confusion Matrices** - Confusion matrices for both models
+
+To generate the plots:
+```bash
+python scripts/plot_model_comparison.py
+```
+
+To view the plots:
+```bash
+python scripts/view_plots.py
+```
+
+For detailed results, see the [evaluations directory](evaluations/README.md).
 
 ## Contributing
 

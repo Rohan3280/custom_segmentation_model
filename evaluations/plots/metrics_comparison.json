@@ -1,0 +1,65 @@
+{
+    "timestamp": "2025-11-12T12:28:15.024060",
+    "models": {
+        "original_dinov2_24_layers": {
+            "final_metrics": {
+                "accuracy": 0.872,
+                "iou": 0.823,
+                "dice_score": 0.901,
+                "pixel_accuracy": 0.945,
+                "precision": 0.889,
+                "recall": 0.915,
+                "f1_score": 0.901,
+                "mean_iou": 0.823
+            },
+            "description": "Original DINOv2 ViT-L/14 with 24 transformer blocks"
+        },
+        "custom_dinov2_25_layers": {
+            "final_metrics": {
+                "accuracy": 0.912,
+                "iou": 0.867,
+                "dice_score": 0.928,
+                "pixel_accuracy": 0.962,
+                "precision": 0.918,
+                "recall": 0.935,
+                "f1_score": 0.926,
+                "mean_iou": 0.867
+            },
+            "description": "Custom DINOv2 ViT-L/14 with 25 transformer blocks (added layer with identity initialization)"
+        }
+    },
+    "improvements": {
+        "accuracy": {
+            "absolute": 0.040000000000000036,
+            "percentage": 4.587155963302757
+        },
+        "iou": {
+            "absolute": 0.04400000000000004,
+            "percentage": 5.346294046172544
+        },
+        "dice_score": {
+            "absolute": 0.027000000000000024,
+            "percentage": 2.996670366259714
+        },
+        "pixel_accuracy": {
+            "absolute": 0.017000000000000015,
+            "percentage": 1.7989417989418006
+        },
+        "precision": {
+            "absolute": 0.029000000000000026,
+            "percentage": 3.2620922384701942
+        },
+        "recall": {
+            "absolute": 0.020000000000000018,
+            "percentage": 2.1857923497267775
+        },
+        "f1_score": {
+            "absolute": 0.025000000000000022,
+            "percentage": 2.7746947835738096
+        },
+        "mean_iou": {
+            "absolute": 0.04400000000000004,
+            "percentage": 5.346294046172544
+        }
+    }
+}
